@@ -24,25 +24,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4806D9512D5BF144007A8434 /* Xtreme Xtends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xtreme Xtends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4806D9612D5BF147007A8434 /* Xtreme XtendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Xtreme XtendsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4806D96B2D5BF147007A8434 /* Xtreme XtendsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Xtreme XtendsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4806D9512D5BF144007A8434 /* Xtreme Xtends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Xtreme Xtends.app"; path = "/Users/codewithji/Xtreme Xtends/build/Debug-iphoneos/Xtreme Xtends.app"; sourceTree = "<absolute>"; };
+		4806D9612D5BF147007A8434 /* Xtreme XtendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Xtreme XtendsTests.xctest"; path = "/Users/codewithji/Xtreme Xtends/build/Debug-iphoneos/Xtreme Xtends.app/PlugIns/Xtreme XtendsTests.xctest"; sourceTree = "<absolute>"; };
+		4806D96B2D5BF147007A8434 /* Xtreme XtendsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Xtreme XtendsUITests.xctest"; path = "/Users/codewithji/Xtreme Xtends/build/Debug-iphoneos/Xtreme XtendsUITests-Runner.app/PlugIns/Xtreme XtendsUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		4806D9532D5BF144007A8434 /* Xtreme Xtends */ = {
+		4806D98E2D5BF502007A8434 /* Xtreme Xtends */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Xtreme Xtends";
-			sourceTree = "<group>";
-		};
-		4806D9642D5BF147007A8434 /* Xtreme XtendsTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Xtreme XtendsTests";
-			sourceTree = "<group>";
-		};
-		4806D96E2D5BF147007A8434 /* Xtreme XtendsUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Xtreme XtendsUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,21 +65,8 @@
 		4806D9482D5BF144007A8434 = {
 			isa = PBXGroup;
 			children = (
-				4806D9532D5BF144007A8434 /* Xtreme Xtends */,
-				4806D9642D5BF147007A8434 /* Xtreme XtendsTests */,
-				4806D96E2D5BF147007A8434 /* Xtreme XtendsUITests */,
-				4806D9522D5BF144007A8434 /* Products */,
+				4806D98E2D5BF502007A8434 /* Xtreme Xtends */,
 			);
-			sourceTree = "<group>";
-		};
-		4806D9522D5BF144007A8434 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4806D9512D5BF144007A8434 /* Xtreme Xtends.app */,
-				4806D9612D5BF147007A8434 /* Xtreme XtendsTests.xctest */,
-				4806D96B2D5BF147007A8434 /* Xtreme XtendsUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,7 +85,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				4806D9532D5BF144007A8434 /* Xtreme Xtends */,
+				4806D98E2D5BF502007A8434 /* Xtreme Xtends */,
 			);
 			name = "Xtreme Xtends";
 			packageProductDependencies = (
@@ -130,9 +107,6 @@
 			dependencies = (
 				4806D9632D5BF147007A8434 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				4806D9642D5BF147007A8434 /* Xtreme XtendsTests */,
-			);
 			name = "Xtreme XtendsTests";
 			packageProductDependencies = (
 			);
@@ -152,9 +126,6 @@
 			);
 			dependencies = (
 				4806D96D2D5BF147007A8434 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				4806D96E2D5BF147007A8434 /* Xtreme XtendsUITests */,
 			);
 			name = "Xtreme XtendsUITests";
 			packageProductDependencies = (
@@ -196,7 +167,7 @@
 			mainGroup = 4806D9482D5BF144007A8434;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 4806D9522D5BF144007A8434 /* Products */;
+			productRefGroup = 4806D9482D5BF144007A8434;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
