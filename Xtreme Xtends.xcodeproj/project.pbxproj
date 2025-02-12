@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4806D9AA2D5BFA4E007A8434 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = 4806D9A92D5BFA4E007A8434 /* Auth */; };
+		4806D9AC2D5BFA4E007A8434 /* Functions in Frameworks */ = {isa = PBXBuildFile; productRef = 4806D9AB2D5BFA4E007A8434 /* Functions */; };
+		4806D9AE2D5BFA4E007A8434 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 4806D9AD2D5BFA4E007A8434 /* PostgREST */; };
+		4806D9B02D5BFA4E007A8434 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 4806D9AF2D5BFA4E007A8434 /* Realtime */; };
+		4806D9B22D5BFA4E007A8434 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 4806D9B12D5BFA4E007A8434 /* Storage */; };
+		4806D9B42D5BFA4E007A8434 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4806D9B32D5BFA4E007A8434 /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		4806D9622D5BF147007A8434 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -42,6 +51,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4806D9AE2D5BFA4E007A8434 /* PostgREST in Frameworks */,
+				4806D9AC2D5BFA4E007A8434 /* Functions in Frameworks */,
+				4806D9B42D5BFA4E007A8434 /* Supabase in Frameworks */,
+				4806D9AA2D5BFA4E007A8434 /* Auth in Frameworks */,
+				4806D9B22D5BFA4E007A8434 /* Storage in Frameworks */,
+				4806D9B02D5BFA4E007A8434 /* Realtime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +104,12 @@
 			);
 			name = "Xtreme Xtends";
 			packageProductDependencies = (
+				4806D9A92D5BFA4E007A8434 /* Auth */,
+				4806D9AB2D5BFA4E007A8434 /* Functions */,
+				4806D9AD2D5BFA4E007A8434 /* PostgREST */,
+				4806D9AF2D5BFA4E007A8434 /* Realtime */,
+				4806D9B12D5BFA4E007A8434 /* Storage */,
+				4806D9B32D5BFA4E007A8434 /* Supabase */,
 			);
 			productName = "Xtreme Xtends";
 			productReference = 4806D9512D5BF144007A8434 /* Xtreme Xtends.app */;
@@ -166,6 +187,9 @@
 			);
 			mainGroup = 4806D9482D5BF144007A8434;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4806D9A82D5BFA4E007A8434 /* XCLocalSwiftPackageReference "../Desktop/DevPortfolio/Apps/Xtreme Xtends/supabase-swift-main" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4806D9482D5BF144007A8434;
 			projectDirPath = "";
@@ -529,6 +553,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		4806D9A82D5BFA4E007A8434 /* XCLocalSwiftPackageReference "../Desktop/DevPortfolio/Apps/Xtreme Xtends/supabase-swift-main" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../Desktop/DevPortfolio/Apps/Xtreme Xtends/supabase-swift-main";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4806D9A92D5BFA4E007A8434 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Auth;
+		};
+		4806D9AB2D5BFA4E007A8434 /* Functions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Functions;
+		};
+		4806D9AD2D5BFA4E007A8434 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PostgREST;
+		};
+		4806D9AF2D5BFA4E007A8434 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Realtime;
+		};
+		4806D9B12D5BFA4E007A8434 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Storage;
+		};
+		4806D9B32D5BFA4E007A8434 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4806D9492D5BF144007A8434 /* Project object */;
 }
