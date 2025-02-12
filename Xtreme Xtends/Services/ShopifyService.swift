@@ -7,3 +7,13 @@
 // Shopify API calls
 
 import Foundation
+import Buy
+
+class ShopifyService {
+    static let shared = ShopifyService()
+    private let client: Graph.Client
+    
+    init() {
+        client = Graph.Client(shopDomain: Constants.shopDomain, apiKey: Constants.apiKey)
+    }
+}
