@@ -1,6 +1,15 @@
 {
-  "originHash" : "070680f7a83beb3542a388e1291e0a357181fb0270e4f4bccc154e33d334e2ef",
+  "originHash" : "65536eb119aac515b66676b483d87d5179eb9bfefd55104d85607852fe6b83e6",
   "pins" : [
+    {
+      "identity" : "mobile-buy-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Shopify/mobile-buy-sdk-ios",
+      "state" : {
+        "revision" : "671019a3fd5ef3dd2399909fc8a4f4012baca166",
+        "version" : "2025.1.0"
+      }
+    },
     {
       "identity" : "swift-asn1",
       "kind" : "remoteSourceControl",
