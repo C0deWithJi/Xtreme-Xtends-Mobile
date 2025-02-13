@@ -38,8 +38,10 @@ struct ProductCard: View {
             
             // Quick Add to Cart
             Button {
+                withAnimation(.spring(response: 0.3, dampingFraction: 0.5)) {
                 // Add to cart logic
-                cart.add(product: product)
+                    cart.add(product: product)
+                }
             } label: {
                 Text("Add to Cart")
                     .font(.caption)
