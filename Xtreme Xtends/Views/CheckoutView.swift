@@ -7,13 +7,29 @@
 // Payment and shipping information
 
 import SwiftUI
+import SafariServices
 
 struct CheckoutView: View {
+    @State private var showSafari = false
+    let checkoutURL: URL
+    
     var body: some View {
-        Text("Checkout")
+        Button("Proceed to Payment") {
+            showSafari.toggle()
+        }
+        .sheet(isPresented: $showSafari) {
+            SafariView(url: checkoutURL)
+        }
     }
 }
 
-#Preview {
-    CheckoutView()
+struct SafariView: UIViewControllerRepresentable {
+    let url: URL
+    
+    func makeUIViewController(context: Context) -> SFSafariViewController {
+        return SFSafariViewController(url: url)
+    }
+    
+    func updateUIViewController(_ uiViewController: SFSafariViewController, context: Context) {}
 }
+
