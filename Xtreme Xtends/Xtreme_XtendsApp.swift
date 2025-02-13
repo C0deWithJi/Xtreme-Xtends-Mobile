@@ -11,7 +11,12 @@ import SwiftUI
 struct Xtreme_XtendsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                MarketplaceView()
+                    .tabItem { Label("Shop", systemImage: "bag") }
+                ARMeasurementView()
+                    .tabItem { Label("Measure", systemImage: "camera") }
+            }
         }
     }
 }

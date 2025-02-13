@@ -14,6 +14,9 @@
 		4806D9B22D5BFA4E007A8434 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 4806D9B12D5BFA4E007A8434 /* Storage */; };
 		4806D9B42D5BFA4E007A8434 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4806D9B32D5BFA4E007A8434 /* Supabase */; };
 		4887543E2D5C46F700635451 /* Buy in Frameworks */ = {isa = PBXBuildFile; productRef = 4887543D2D5C46F700635451 /* Buy */; };
+		488754432D5D76F800635451 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 488754422D5D76F800635451 /* FirebaseAnalytics */; };
+		488754452D5D76F800635451 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 488754442D5D76F800635451 /* FirebaseAuth */; };
+		488754472D5D76F800635451 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 488754462D5D76F800635451 /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +57,10 @@
 			files = (
 				4806D9AE2D5BFA4E007A8434 /* PostgREST in Frameworks */,
 				4806D9AC2D5BFA4E007A8434 /* Functions in Frameworks */,
+				488754432D5D76F800635451 /* FirebaseAnalytics in Frameworks */,
+				488754472D5D76F800635451 /* FirebaseFirestore in Frameworks */,
 				4887543E2D5C46F700635451 /* Buy in Frameworks */,
+				488754452D5D76F800635451 /* FirebaseAuth in Frameworks */,
 				4806D9B42D5BFA4E007A8434 /* Supabase in Frameworks */,
 				4806D9AA2D5BFA4E007A8434 /* Auth in Frameworks */,
 				4806D9B22D5BFA4E007A8434 /* Storage in Frameworks */,
@@ -116,6 +122,9 @@
 				4806D9B12D5BFA4E007A8434 /* Storage */,
 				4806D9B32D5BFA4E007A8434 /* Supabase */,
 				4887543D2D5C46F700635451 /* Buy */,
+				488754422D5D76F800635451 /* FirebaseAnalytics */,
+				488754442D5D76F800635451 /* FirebaseAuth */,
+				488754462D5D76F800635451 /* FirebaseFirestore */,
 			);
 			productName = "Xtreme Xtends";
 			productReference = 4887540F2D5C42D700635451 /* Xtreme Xtends.app */;
@@ -194,8 +203,8 @@
 			mainGroup = 4806D9482D5BF144007A8434;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				4806D9A82D5BFA4E007A8434 /* XCLocalSwiftPackageReference "../Desktop/DevPortfolio/Apps/Xtreme Xtends/supabase-swift-main" */,
 				4887543C2D5C46F700635451 /* XCRemoteSwiftPackageReference "mobile-buy-sdk-ios" */,
+				488754412D5D76F800635451 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4806D9482D5BF144007A8434;
@@ -305,6 +314,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CameraUsage = "Required for AR";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -327,6 +337,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NSCameraUsageDescription = " \"We need access to your camera to measure your crown size.\"";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -368,6 +379,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				CameraUsage = "Required for AR";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -384,6 +396,7 @@
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				NSCameraUsageDescription = " \"We need access to your camera to measure your crown size.\"";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
@@ -561,13 +574,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		4806D9A82D5BFA4E007A8434 /* XCLocalSwiftPackageReference "../Desktop/DevPortfolio/Apps/Xtreme Xtends/supabase-swift-main" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../Desktop/DevPortfolio/Apps/Xtreme Xtends/supabase-swift-main";
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
 		4887543C2D5C46F700635451 /* XCRemoteSwiftPackageReference "mobile-buy-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -575,6 +581,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2025.1.0;
+			};
+		};
+		488754412D5D76F800635451 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.8.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -608,6 +622,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4887543C2D5C46F700635451 /* XCRemoteSwiftPackageReference "mobile-buy-sdk-ios" */;
 			productName = Buy;
+		};
+		488754422D5D76F800635451 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 488754412D5D76F800635451 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		488754442D5D76F800635451 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 488754412D5D76F800635451 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		488754462D5D76F800635451 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 488754412D5D76F800635451 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
