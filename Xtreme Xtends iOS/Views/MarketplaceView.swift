@@ -10,43 +10,49 @@ import SwiftUI
 
 struct MarketplaceView: View {
     @StateObject private var viewModel = MarketplaceViewModel()
+    @State private var serachText = ""
+
+    private var columns: [GridItem] {
+        [GridItem(.adaptive(minimum: 160), GridItem(.adaptive(minimum: 160))]
+    }
     
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())]) {
-                    ForEach(viewModel.products) { product in
-                        ProductCard(product: product)
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(viewModel.filteredProducts) { product in
+                        NavigationLink(destination: ProductDetailView(product: product)) {
+                            ProductCard(product: product)
+                                .onAppear {
+                                    if product == viewModel.filteredProducts.last {
+                                        viewModel.loadMoreProducts()
+                                    }
+                                }
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
                 .padding()
+
+                if viewModel.isLoading {
+                    ProgressView()
+                } else if viewModel.filteredProducts.isEmpty {
+                    Text("No products found")
+                        .foregroundColor(.systemGray6)
+                        .padding()
+                }
             }
             .navigationTitle("Xtreme Xtends")
-            .onAppear {
-                viewModel.fetchProducts()
+            .searchable(text: $searchText, prompt: "Search products...")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    FilterSortButton(viewModel: viewModel)
+                }
+            }
+            .onChange(of: searchText) { newValue in
+                viewModel.searchText = newValue
             }
         }
     }
 }
 
-// Simple product card
-struct ProductCard: View {
-    let product: Product
-    
-    var body: some View {
-        VStack {
-            AsyncImage(url: URL(string: product.imageURL)) { image in
-                image.resizable()
-            } placeholder: {
-                ProgressView()
-            }
-            .frame(height: 150)
-            
-            Text(product.title)
-            Text("$\(product.price, specifier: "%.2f")")
-        }
-        .padding()
-        .background(Color(.systemBackground))
-        .cornerRadius(10)
-    }
-}
