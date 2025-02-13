@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct Xtreme_XtendsApp: App {
+    @StateObject private var cart = Cart()
+
     var body: some Scene {
         WindowGroup {
             TabView {
@@ -17,6 +19,7 @@ struct Xtreme_XtendsApp: App {
                 ARMeasurementView()
                     .tabItem { Label("Measure", systemImage: "camera") }
             }
+            .environmentObject(cart)
         }
     }
 }
