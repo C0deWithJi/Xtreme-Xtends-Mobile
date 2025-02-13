@@ -32,6 +32,7 @@ struct MarketplaceView: View {
                         .buttonStyle(.plain)
                     }
                 }
+                .animation(.easeInOut)(duration: 0.3), value: viewModel.filteredProducts)
                 .padding()
 
                 if viewModel.isLoading {
