@@ -60,6 +60,7 @@ struct ProductDetailView: View {
                 // Add to Cart
                 Button {
                     //Add to cart logic
+                    cart.add(product: product)
                 } label: {
                     Text("Add to Cart (\(quantity))")
                         .font(.headline)
@@ -68,6 +69,8 @@ struct ProductDetailView: View {
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(8)
+                        .scaleEffect(cart.items.contains(where: { $0.product.id == product.id }) ? 1.1 : 1.0)
+                        .animation(.spring(), value: cart.items)
                 }
                 .padding()
             }
