@@ -3,7 +3,15 @@
 //  Xtreme Xtends
 //
 //  Created by Jihad Vercher on 2/11/25.
-
-// Product data model
+//
+// Defines structure of wig products
 
 import Foundation
+
+struct Product: Identifiable, Codable {
+    let id: String
+    let title: String
+    let description: String
+    let price: Double
+    let imageURL: String
+}
