@@ -14,17 +14,22 @@ struct ARMeasurementView: View {
     
     var body: some View {
         ZStack {
-            ARViewContainer(arView: arService.arView)
-            Text("Crown size: \(String(format: "%.if", arService.crownMeasurement)) cm")
-                .font(.title)
+            ARView(arService: arService)
+            Text("Crown Size: \(String(format: "%.1f", arService.crownMeasurement)) cm")
+                .padding()
+                .background(.thinMaterial)
+                .cornerRadius(10)
         }
     }
 }
 
-struct ARViewContainer: UIViewRepresentable {
-    let arView: ARSCNView
+struct ARView: UIViewRepresentable {
+    let arService: ARMeasurementService
     
-    func makeUIView(context: Context) -> ARSCNView { arView }
+    func makeUIView(context: Context) -> ARSCNView {
+        return arService.arView
+    }
+    
     func updateUIView(_ uiView: ARSCNView, context: Context) {}
 }
 
